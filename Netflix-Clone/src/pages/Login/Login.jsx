@@ -2,8 +2,25 @@ import React from 'react'
 import './Login.css'
 import Logo from '../../assets/logo.png'
 import { useState } from 'react'
+import {login,signup} from '../../firebase.config'
+
+
 const Login = () => {
+
   const[signState,setSignState]=useState("Sign In")
+  const[name,setName]=useState("");
+  const[email,setEmail]=useState("");
+  const[password,setPassword]=useState("");
+  const user_auth=async (event)=>{
+    event.preventDefault();
+    if(signState==="Sign In"){
+      await login(email,password);
+    }
+    else{
+      await signup(name,email,password);
+    }
+  }
+
   return (
     <div className="login">
       <img src={Logo} className='login-logo' alt="" />
@@ -11,19 +28,19 @@ const Login = () => {
         <h1>{signState}</h1>
         <form >
           {signState==="Sign Up"?<div className='input-box'>
-            <input type="text" required/>
-            <label className='lll'>Your Name</label>
+            <input value={name} onChange={(e)=>{setName(e.target.value)}}type="text" required placeholder=' '/>
+            <label className="lll">Your Name</label>
           </div>:<></>}
           
           <div className='input-box'>
-            <input type="email" required />
-            <label className='lll'>Your Email</label>
+            <input type="email" required value={email} onChange={(e)=>{setEmail(e.target.value)}} placeholder=' '/>
+            <label className="lll">Your Email</label>
           </div>
           <div className='input-box'>
-            <input type="password" required/>
-            <label className='lll'>Your Password</label>
+            <input type="password" required value={password} onChange={(e)=>{setPassword(e.target.value)}} placeholder=' '/>
+            <label className="lll">Your Password</label>
           </div>
-          <button>{signState}</button>
+          <button onClick={user_auth} type='submit'>{signState}</button>
           <div className="form-help">
             <div className="remember">
               <input type="checkbox" className='check'/>

@@ -4,14 +4,18 @@ import cards_data from '../../assets/cards/Cards_data'
 import { Link } from 'react-router-dom';
 
 const TitleCards = ({title,category}) => {
+  
+
   const cardsRef=useRef();
   const [apiData,setApiData]=useState([]);
+   const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
 useEffect(()=>{
   const options = {
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlMGZmOTJlZTM5MWIzMTUyYmVlODVjOWEzZmMyNTM5NCIsIm5iZiI6MTc1MjE4Nzk0NS4xMzQsInN1YiI6IjY4NzA0NDI5ODI3Mzc3MThkODUxZjMzOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ezt5ySwUsk2QRk2ribQtFbRuPx3Nd1X1Rv31outr3bE'
+    Authorization: `Bearer ${API_KEY}`
+
   }
 };
 

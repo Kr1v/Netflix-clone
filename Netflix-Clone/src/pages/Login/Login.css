@@ -60,7 +60,7 @@
 
 }
 .input-box input:focus +.lll,
-.input-box:valid+.lll{
+.input-box input:not(:placeholder-shown) +.lll {
   top: 0%;
   font-size: .65rem;
   color: white;
