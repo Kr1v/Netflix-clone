@@ -33,3 +33,33 @@
     text-decoration: none;
     color:white;
 }
+@media (max-width:800px) {
+    .title-cards{
+        margin-top:20px;
+        margin-bottom:0;
+
+    }
+    .title-cards h2{
+        font-size: .9rem;
+    }
+    .card-list img{
+        width:200px;
+    }
+    .card-list p{
+        font-size: .7rem;
+    }
+    
+}
+@media (max-width:500px) {
+ 
+    .title-cards h2{
+        font-size: .78rem;
+    }
+    .card-list img{
+        width:165px;
+    }
+    .card-list p{
+        font-size: .6rem;
+    }
+    
+}
