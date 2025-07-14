@@ -6,7 +6,7 @@ A responsive Netflix Clone built with **React** and **Firebase**, featuring real
 
 ## 🚀 Live Demo
 
-🌐 [Visit Site](https://splendorous-monstera-e63d13.netlify.app/login)
+🌐 [Visit Site]([https://net-my-clone-kr1v.netlify.app/login])
 
 ---
 
