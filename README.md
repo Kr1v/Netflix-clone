@@ -2,7 +2,9 @@
 
 A responsive Netflix Clone built with **React** and **Firebase**, featuring real movie data from TMDB, authentication, and sleek UI inspired by Netflix. Built to practice real-world project structure, animations, and Firebase Auth integration.
 
+## 🚀 Live Demo
 
+🌐 [Visit Site](https://kr1v-net-clone.netlify.app/)
 
 
 
